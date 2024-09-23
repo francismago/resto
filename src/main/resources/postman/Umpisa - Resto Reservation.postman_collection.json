@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "4bd4d507-0cb4-4205-a29e-519b04fa6a27",
+		"name": "Umpisa - Resto Reservation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"francis 3\",\n    \"phoneNumber\":\"09209725507\",\n    \"email\":\"francis@gmail.com\",\n    \"reservedDatetime\": \"2024-09-23T16:10:00\",\n    \"guestCount\": 5,\n    \"isSmsNotify\": true,\n    \"isEmailNotify\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reservations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Reservation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reservations/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservations",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "c7a63d9a-ee52-4536-b2d2-2b097e28310f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Reservations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reservations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Reservation",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"reservedDatetime\": \"2024-09-22T14:00:00\",\n    \"guestCount\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reservations/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservations",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "26484b9d-0318-423f-a06d-5eb0707ff7e2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
