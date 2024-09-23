@@ -51,7 +51,7 @@ Sample Response Body:
 ```
 ###
 
-Cancel Reservation: **DELETE** api/reservations/{id}
+Cancel Reservation: **DELETE** /api/reservations/{id}
 
 
 Sample Response Body:
@@ -64,7 +64,7 @@ Sample Response Body:
 
 ###
 
-View Reservations: **GET** api/reservations
+View Reservations: **GET** /api/reservations
 
 
 Sample Response Body:
